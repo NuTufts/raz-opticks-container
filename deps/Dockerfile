@@ -14,7 +14,7 @@ RUN apt-get update -y && apt install -y wget && \
 RUN apt-get update -y && \
     apt install -y build-essential mercurial sudo \
     		   linux-headers-$(uname -r) curl \
-		   zip libglu1-mesa-dev freeglut3-dev \
+		   zip libglu1-mesa-dev freeglut3-dev python-dev \
 		   mesa-common-dev libglew-dev libgl1-mesa-glx && \
     apt-get autoremove -y && apt-get clean -y
 
@@ -23,6 +23,7 @@ RUN cd /tmp && wget https://dl.bintray.com/boostorg/release/1.69.0/source/boost_
     tar xf boost_1_69_0.tar.gz && \
     cd /tmp/boost_1_69_0 && \
     ./bootstrap.sh && \
+    ./b2 && \
     ./b2 install && \
     rm /tmp/boost_1_69_0.tar.gz && rm -r /tmp/boost_1_69_0
 
