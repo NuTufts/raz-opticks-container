@@ -1,8 +1,8 @@
-FROM raz/ubuntu-cuda-optix:v2
+FROM raz/optix:5.0.1
 
 MAINTAINER taritree.wongjirad@tufts.edu
 
-# OPENCV3
+# Build Opticks!
 RUN apt-get update && \
     apt-get install -y build-essential \
 		       mercurial && \
