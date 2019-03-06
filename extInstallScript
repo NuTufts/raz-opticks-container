@@ -1,0 +1,86 @@
+#!/bin/bash -li
+source ~/.bashrc
+
+opticks-
+
+bcm-
+bcm--
+echo
+echo 'bcm'
+echo
+glm-
+glm--
+echo
+echo 'glm'
+echo
+glfw-
+glfw--
+echo
+echo 'glfw'
+echo
+glew-
+glew--
+echo
+echo 'glew'
+echo
+gleq-
+gleq--
+echo
+echo 'gleq'
+echo
+imgui-
+imgui--
+echo
+echo 'imgui'
+echo
+assimp-
+assimp--
+echo
+echo 'assimp'
+echo
+openmesh-
+openmesh--
+echo
+echo 'openmesh'
+echo
+plog-
+plog--
+echo
+echo 'plog'
+echo
+opticksdata-
+opticksdata--
+echo
+echo 'opticksdata'
+echo
+oimplicitmesher-
+oimplicitmesher--
+echo
+echo 'oimplicitmesher'
+echo
+odcs-
+odcs--
+echo
+echo 'odcs'
+echo
+oyoctogl-
+oyoctogl--
+echo
+echo 'oyoctogl'
+echo
+ocsgbsp-
+ocsgbsp--
+echo
+echo 'ocsgbsp'
+echo
+xercesc-
+xercesc--
+echo
+echo 'xercesc'
+echo
+g4-
+g4--
+echo
+echo 'g4'
+echo
+

@@ -1,0 +1,34 @@
+#!/bin/bash
+
+case $1 in
+     2)
+	runImg="raz/ubuntu-cuda-optix:v2"
+	;;
+	
+     3)
+	runImg="raz/ubuntu16.04-cuda-optix-opticks_deps:v3"
+	;;
+	
+     4)
+	runImg="raz/opticks:v4"
+	;;
+	
+     *)
+	echo "$1 not recognized"
+	exit 1
+esac
+
+docker run -it --rm \
+       --runtime=nvidia \
+       -v $HOME/.Xauthority:/root/.Xauthority \
+       -e XAUTHORITY=/root/.Xauthority \
+       -e DISPLAY=$DISPLAY \
+       --net=host \
+       --device /dev/nvidia0:/dev/nvidia0 \
+       --device /dev/nvidia1:/dev/nvidia1 \
+       --device /dev/nvidiactl:/dev/nvidiactl \
+       --device /dev/nvidia-modeset:/dev/nvidia-modeset \
+       --device /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools \
+       --device /dev/nvidia-uvm:/dev/nvidia-uvm \
+       $runImg \
+       bash
